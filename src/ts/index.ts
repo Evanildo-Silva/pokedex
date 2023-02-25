@@ -5,7 +5,5 @@ export const getPokemon = async (pokemon: string) => {
     
     if(response.status === 200){
     return response.data
-    } else {
-        response.status
     }
 }
