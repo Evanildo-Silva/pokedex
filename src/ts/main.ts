@@ -11,11 +11,14 @@ const renderPokemon = async (pokemon: string) => {
     appElemets.pokemonImage.style.display = "block";
     appElemets.pokemonName.innerHTML = data.name;
     appElemets.pokemonId.innerHTML = data.id;
-    appElemets.pokemonImage.src =
-      data["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
-        "front_default"
-      ];
-    searchPokemonList = data.id
+    appElemets.pokemonImage.src = data["sprites"]["versions"]["generation-v"][
+      "black-white"
+    ]["animated"]["front_default"]
+      ? data["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
+          "front_default"
+        ]
+      : data["sprites"]["front_default"];
+    searchPokemonList = data.id;
   } catch (error) {
     const err = error as AxiosError;
     console.log(err.response?.data);
@@ -34,13 +37,13 @@ appElemets.form?.addEventListener("submit", (e) => {
 });
 
 appElemets.buttonPrev?.addEventListener("click", () => {
-  let id = Number(searchPokemonList)
-  if(id > 1)id -= 1 
+  let id = Number(searchPokemonList);
+  if (id > 1) id -= 1;
   renderPokemon(id.toString());
 });
 
 appElemets.buttonNext?.addEventListener("click", () => {
-  searchPokemonList += 1
+  searchPokemonList += 1;
   renderPokemon(searchPokemonList);
 });
 
