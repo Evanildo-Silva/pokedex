@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="icon" type="image/png+xml" href="/public/favicons/favicon.png" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <title>Pokédex</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main>
+      <img src="" alt="pokemon" class="pokemon_image" />
+
+      <h1 class="pokemon_data">
+        <span class="pokemon_id">10</span> -
+        <span class="pokemon_name">testando...</span>
+      </h1>
+
+      <form class="form">
+        <input
+          type="search"
+          class="input"
+          placeholder="Name or Number"
+          required
+        />
+      </form>
+
+      <div class="button_box">
+        <button class="button btn_prev">Prev</button>
+        <button class="button btn_netx">Next</button>
+      </div>
+
+      <img src="/public/images/pokedex.png" alt="pokedex" class="pokedex" />
+    </main>
   </body>
 </html>
