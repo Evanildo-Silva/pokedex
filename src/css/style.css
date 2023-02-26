@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -84,6 +84,10 @@ main {
   box-shadow: -0.188rem 0.25rem 0 #888, -0.313rem 0.438rem 0 #333;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .button_box {
   display: flex;
   position: absolute;
@@ -104,16 +108,54 @@ main {
   color: #444;
   box-shadow: -0.125rem 0.188rem 0 #888, -0.25rem 0.375rem 0 #000;
 }
+.button {
+  padding: 1%;
+  border: 0.125rem solid #000;
+  border-radius: 0.313rem;
+  font-weight: 600;
+  font-size: clamp(0.5rem, 5vw, 1.563rem);
+  color: #444;
+  box-shadow: -0.125rem 0.188rem 0 #888, -0.25rem 0.375rem 0 #000;
+}
 
 .buttons:active {
   box-shadow: inset -0.25rem 0.25rem 0 #222;
   font-size: 0.9rem;
 }
+.button:active {
+  box-shadow: inset -0.25rem 0.25rem 0 #222;
+}
 
 .logo_link {
- width: 7%;
- min-width: 2.813rem;
+  width: 7%;
+  min-width: 2.813rem;
 }
 .logo_image {
- width: 100%;
+  width: 100%;
+}
+
+dialog {
+  position: absolute;
+  width: 65%;
+  max-width: 35rem;
+  padding: 1rem;
+  top: 10%;
+  left: 55%;
+  transform: translate(-63%, 20%);
+  border-radius: 0.313rem;
+  border: 0.125rem solid #333;
+  font-weight: 600;
+  font-size: clamp(0.5rem, 5vw, 1.563rem);
+  color: #3a444d;
+  box-shadow: -0.188rem 0.25rem 0 #888, -0.313rem 0.438rem 0 #333;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2f67b2;
 }

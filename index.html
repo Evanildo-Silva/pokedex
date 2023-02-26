@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png+xml" href="/public/favicons/favicon.png" />
     <link rel="stylesheet" href="/src/css/style.css" />
+    <script type="module" src="/src/ts/main.ts" defer></script>
     <title>Pokédex</title>
   </head>
   <body class="bg">
     <header>
-      <a href="https://pokeapi.co/" target="_blank" class="logo_link"><img src="/public/images/pokeapi_logo.png" alt="pokeapi" class="logo_image"></a>
-     <div class="button_box_info">
-      <button class="button btn_info">INFO</button>
-     </div>
+      <a href="https://pokeapi.co/" target="_blank" class="logo_link"
+        ><img
+          src="/public/images/pokeapi_logo.png"
+          alt="pokeapi"
+          class="logo_image"
+      /></a>
+      <div class="button_box_info">
+        <button class="button btn_info">INFO</button>
+      </div>
     </header>
     <main>
       <img src="#" alt="pokemon" class="pokemon_image" />
@@ -37,8 +43,45 @@
       </div>
 
       <img src="/public/images/pokedex.png" alt="pokedex" class="pokedex" />
-
-      <script type="module" src="/src/ts/main.ts"></script>
+      <dialog>
+        <p>
+          Projeto feito com
+          <a
+            href="https://www.w3schools.com/html/"
+            target="_blank"
+            class="logo_link"
+            >HTML</a
+          >,
+          <a
+            href="https://www.w3schools.com/css/"
+            target="_blank"
+            class="logo_link"
+            >CSS</a
+          >,
+          <a
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            class="logo_link"
+            >Typescript</a
+          >
+          e
+          <a
+            href="https://axios-http.com/ptbr/"
+            target="_blank"
+            class="logo_link"
+            >Axios</a
+          >
+          para fazer consultas online para Pokéapi.
+        </p>
+        <img
+          src="/public/images/pokeapi_logo.png"
+          alt="pokeapi"
+          class="logo_image"
+        />
+        <div>
+          <button class="button btn_close_modal">Fechar</button>
+        </div>
+      </dialog>
     </main>
   </body>
 </html>
