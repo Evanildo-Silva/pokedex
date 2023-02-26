@@ -47,4 +47,12 @@ appElemets.buttonNext?.addEventListener("click", () => {
   renderPokemon(searchPokemonList);
 });
 
+appElemets.buttonShowModal?.addEventListener("click", () => {
+  appElemets.modal?.showModal();
+});
+
+appElemets.buttonCloseModal?.addEventListener("click", () => {
+  appElemets.modal?.close();
+});
+
 renderPokemon(searchPokemonList);
